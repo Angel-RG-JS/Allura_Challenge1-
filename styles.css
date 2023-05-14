@@ -1,0 +1,280 @@
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+    color: #0A3871;
+    margin: 0; 
+    font: inherit;
+}
+
+html{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+    
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 1em;
+    /* Light blue/light-blue-100 */
+    background: #F3F5FC;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 5vh;
+    
+}
+
+main {
+    height: 50%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 75% 5% 5%;
+    padding: 1em;
+}   
+
+.textareaHolder{
+    grid-row: 1 / span 1;
+    position: relative;
+}
+
+#textInput {
+    /* Ingrese el texto aqui */
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: #0A3871;
+
+    /* identical to box height, or 48px */
+
+    background: none;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+::placeholder{
+    opacity: 1;
+    color: #0A3871;
+    text-transform: none;
+}
+
+.advertencia {
+    /* Frame 1 */
+    grid-row: 2 / span 1;
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+}
+
+.advertencia h6 {
+    font-size: 12px;
+    line-height: 150%;
+
+    /* identical to box height, or 18px */
+
+    /* Gray/gray-400 */
+    color: #495057;
+
+    opacity: 0.8;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.buttons-div{
+    /* Frame 3 */
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button {
+    /* Button */
+    position: relative;
+
+    width: 40%;
+    height: 10vh;
+
+    font-size: 16px;
+    border-radius: 24px;
+}
+
+#encriptar{
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    color: #FFFFFF;
+    border-width: 1px;
+    order: 0;
+}
+
+#desencriptar{
+    /* Light gray */
+    background: #D8DFE8;
+    color: #0A3871;
+
+    /* Dark blue/dark-blue-300 */
+    border: 1px solid #0A3871;
+
+    order:1;
+}
+
+#output {
+    width: 100%;
+    height: 45%;
+    font-size: 24px;
+    line-height: 150%;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* White */
+    background: #FFFFFF;
+
+    /* shadow */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+#temporalTextArea {
+    width: 90%;
+    height: 90%;
+    margin: 1em;
+    color: #0A3871;
+    outline: none;
+    text-decoration: none;
+}
+
+#temporalTextArea:placeholder-shown {
+    color: #0A3871;
+    text-align: center;
+}
+
+    @media only screen and (min-width: 768px) {
+        body{
+            display: grid;
+            grid-template-columns: 10% 50% 25%;
+            grid-template-rows: 5% 90% 5%;
+            justify-content: space-around;
+        }
+
+        header {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+        }
+
+        .logo{
+            /* Logo */
+            position: relative;
+            height: 100%;
+        }
+
+        main {
+            height: 100%;
+            grid-column: 2 / span 1;
+            grid-row: 2 / span 2;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 85% 5% 5%;
+        }
+
+        .textareaHolder{
+            grid-row: 1 / span 1;
+            position: relative;
+        }
+        
+        #textInput {
+            /* Ingrese el texto aqui */
+        
+            position: relative;
+            height: 100%;
+            width: 100%;
+        
+            font-size: 32px;
+            line-height: 150%;
+            color: #0A3871;
+            /* identical to box height, or 48px */
+        
+            background: none;
+            border: none;
+            outline: none;
+            text-decoration: none;
+        }
+
+        .advertencia {
+            /* Frame 1 */
+            grid-row: 2 / span 1;
+        }
+
+        .buttons-div{
+            /* Frame 3 */
+            grid-row: 3 / span 1;
+        }
+
+        .button {
+            cursor: pointer;
+        }
+
+        .button:hover,
+        .button:focus-visible {
+            font-size: large;
+        }
+
+        #output {
+            /* Rectangle 1 */ 
+            grid-column: 3 / span 1;
+            grid-row: 1 / span 3;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 85% 5% 5%;
+            justify-content: center;
+        }
+
+        #temporalTextArea {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 2;
+            width: 90%;
+            height: 90%;
+            margin: 0 auto;
+            color: #0A3871;
+            outline: none;
+            text-decoration: none;
+            
+        }
+
+        #temporalTextArea:placeholder-shown {
+            height: 100%;
+            background-image: url(./Images/Muñeco.png);
+            background-repeat: no-repeat;
+            background-position: 50% 20%;
+            color: #0A3871;
+            text-align: center;
+            padding-top: 100%;
+        }
+
+        #temporalTextArea::placeholder::first-line{
+            font-weight: bold;
+        }
+    }

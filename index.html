@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Challenge ONE - Sprint 01: Encriptador</title> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        
+        <header>
+                <img src="./images/Logo@2x.png" alt="alura logo" class="logo">
+        </header>
+        <main>
+            <section aria-labelledby="textInput" class="textareaHolder">
+                <textarea cols="50" rows="10" id="textInput" placeholder="Ingrese el texto aquí" oninput="onInput()"></textarea>
+            </section>
+            <section aria-label="buttons">
+                <div class="advertencia">
+                    <img src="./images/bi_exclamation-circle-fill-1.png" alt="símbolo advertencia">
+                    <h6 class="text-block">Solo letras minúsculas y sin acentos</h6>
+                </div>
+                    
+                <div class="buttons-div">
+                    <button class="button" id="encriptar">Encriptar</button>
+                    <button class="button" id="desencriptar">Desencriptar</button>
+                </div>
+            </section>
+        </main>
+        
+        <aside id="output">
+            <textarea cols="20" rows="10" id="temporalTextArea" placeholder= "Ningún mensaje fue encontrado
+Ingresa el texto que desees encriptar o desencriptar" onlyread disabled></textarea>
+        </aside>
+        
+        
+        <script src="script.js"></script>
+    </body>
+</html>
