@@ -266,7 +266,7 @@ main {
 
         #temporalTextArea:placeholder-shown {
             height: 100%;
-            background-image: url(./Images/Muñeco.png);
+            background-image: url(./images/Muñeco.png);
             background-repeat: no-repeat;
             background-position: 50% 20%;
             color: #0A3871;
